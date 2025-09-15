@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDonly - Secure Attendance Tracking.</title>
+    <title data-translate-key="page_title">IDonly - Secure Attendance Tracking.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -93,14 +93,24 @@
                         <img src="logo.png" alt="Logo" class="h-8 w-auto">
                     </a>
                     <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
-                        <a href="#about" class="hover:text-black">About</a>
-                        <a href="#security" class="hover:text-black">Security</a>
-                        <a href="#pricing" class="hover:text-black">Pricing</a>
-                        <a href="#contact" class="hover:text-black">Contact</a>
+                        <a href="#about" class="hover:text-black" data-translate-key="nav_about">About</a>
+                        <a href="#security" class="hover:text-black" data-translate-key="nav_security">Security</a>
+                        <a href="#pricing" class="hover:text-black" data-translate-key="nav_pricing">Pricing</a>
+                        <a href="#contact" class="hover:text-black" data-translate-key="nav_contact">Contact</a>
                     </nav>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a href="#contact" class="btn">Get Started</a>
+                    <div class="relative flex items-center">
+                        <select id="language-switcher" class="block appearance-none bg-white border border-gray-300 hover:border-gray-400 w-10 h-10 p-0 rounded-full shadow leading-tight focus:outline-none focus:shadow-outline text-xs font-semibold text-gray-700 text-center sm:w-12 sm:h-12 sm:text-sm">
+                            <option value="en">EN</option>
+                            <option value="uz">UZ</option>
+                            <option value="ru">RU</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-1 text-gray-700">
+                            <svg class="fill-current h-3 w-3 sm:h-4 sm:w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn" data-translate-key="get_started">Get Started</a>
                 </div>
             </div>
         </div>
@@ -130,19 +140,19 @@
         <!-- Best Suited For Section -->
         <section id="about" class="py-16 bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center">Best Suited For</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center" data-translate-key="best_suited_for">Best Suited For</h2>
                 <div id="cards-container" class="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-8 overflow-x-auto scrollbar-hide py-4">
                     <!-- Office Card -->
                     <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
                         <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Office Building Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
-                        <h3 class="text-lg font-semibold">Offices</h3>
+                        <h3 class="text-lg font-semibold" data-translate-key="offices">Offices</h3>
                     </div>
                     <!-- Educational Institutions Card -->
                     <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
                         <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21.6 10.8L12 5.4 2.4 10.8 12 16.2l9.6-5.4zM12 18.6l-7.2-4V10.8l7.2 4 7.2-4v3.8l-7.2 4z" />
                         </svg>
-                        <h3 class="text-lg font-semibold">Educational Institutions</h3>
+                        <h3 class="text-lg font-semibold" data-translate-key="educational_institutions">Educational Institutions</h3>
                     </div>
                     <!-- Small Businesses Card -->
                     <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
@@ -150,17 +160,17 @@
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
                         </svg>
-                        <h3 class="text-lg font-semibold">Small Businesses</h3>
+                        <h3 class="text-lg font-semibold" data-translate-key="small_businesses">Small Businesses</h3>
                     </div>
                     <!-- Large Businesses Card -->
                     <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
                         <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Large Business Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h6m-6 4h6m-6 4h6m-6 4h6m0-4v-4m0 4V7"></path></svg>
-                        <h3 class="text-lg font-semibold">Large Businesses</h3>
+                        <h3 class="text-lg font-semibold" data-translate-key="large_businesses">Large Businesses</h3>
                     </div>
                     <!-- Medical Centers Card -->
                     <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
                         <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Medical Center Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <h3 class="text-lg font-semibold">Medical Centers</h3>
+                        <h3 class="text-lg font-semibold" data-translate-key="medical_centers">Medical Centers</h3>
                     </div>
                 </div>
             </div>
@@ -169,26 +179,26 @@
         <!-- Security Section -->
         <section id="security" class="py-16 bg-gray-100">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold text-gray-900 mb-20">Multi-Layered Security You Can Trust</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-20" data-translate-key="security_title">Multi-Layered Security You Can Trust</h2>
             </div>
             <div class="container mx-auto px-4">
                 <div class="relative">
                     <div class="sticky top-24 mb-12">
                         <div class="bg-gradient-to-br from-purple-600 to-blue-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4">Advanced Image Encryption</h3>
-                            <p class="text-xl max-w-3xl mx-auto">Your visual data is protected with state-of-the-art encryption and stored in a secure, private cloud environment. We ensure that all images are handled with the utmost confidentiality and integrity, safeguarding them from unauthorized access.</p>
+                            <h3 class="font-bold text-3xl mb-4" data-translate-key="encryption_title">Advanced Image Encryption</h3>
+                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="encryption_description">Your visual data is protected with state-of-the-art encryption and stored in a secure, private cloud environment. We ensure that all images are handled with the utmost confidentiality and integrity, safeguarding them from unauthorized access.</p>
                         </div>
                     </div>
                     <div class="sticky top-28 mb-12">
                         <div class="bg-gradient-to-br from-green-500 to-teal-400 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4">Comprehensive Data Protection</h3>
-                            <p class="text-xl max-w-3xl mx-auto">We employ multi-layered security for all sensitive information, including names, arrival times, and other personal data. Our robust infrastructure ensures your data is encrypted both in transit and at rest, providing a secure and trustworthy solution.</p>
+                            <h3 class="font-bold text-3xl mb-4" data-translate-key="data_protection_title">Comprehensive Data Protection</h3>
+                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="data_protection_description">We employ multi-layered security for all sensitive information, including names, arrival times, and other personal data. Our robust infrastructure ensures your data is encrypted both in transit and at rest, providing a secure and trustworthy solution.</p>
                         </div>
                     </div>
                     <div class="sticky top-32">
                         <div class="bg-gradient-to-br from-red-500 to-yellow-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4">Robust Platform Security</h3>
-                            <p class="text-xl max-w-3xl mx-auto">Our application is built on a foundation of proven security practices, utilizing the strengths of Django and Render, and secured with SSL encryption. This multi-faceted approach protects against a wide range of cyber threats, ensuring the reliability and safety of our platform.</p>
+                            <h3 class="font-bold text-3xl mb-4" data-translate-key="platform_security_title">Robust Platform Security</h3>
+                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="platform_security_description">Our application is built on a foundation of proven security practices, utilizing the strengths of Django and Render, and secured with SSL encryption. This multi-faceted approach protects against a wide range of cyber threats, ensuring the reliability and safety of our platform.</p>
                         </div>
                     </div>
                 </div>
@@ -199,8 +209,8 @@
         <section id="pricing" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-3xl mx-auto">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Flexible Pricing for Every Need</h2>
-                    <p class="text-gray-600 text-lg">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4" data-translate-key="pricing_title">Flexible Pricing for Every Need</h2>
+                    <p class="text-gray-600 text-lg" data-translate-key="pricing_subtitle">
                         From small businesses to large enterprises, we have a plan that fits your requirements.
                     </p>
                 </div>
@@ -208,93 +218,93 @@
                 <div class="mt-16 grid md:grid-cols-3 gap-8">
                     <!-- Starter Plan -->
                     <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-900">Starter</h3>
-                        <p class="mt-4 text-gray-500">Ideal for new businesses getting started.</p>
+                        <h3 class="text-2xl font-bold text-gray-900" data-translate-key="starter_plan">Starter</h3>
+                        <p class="mt-4 text-gray-500" data-translate-key="starter_description">Ideal for new businesses getting started.</p>
                         <div class="mt-6">
-                            <span class="text-4xl font-bold">3,990,000 UZS / 1st year</span>
-                            <span class="text-gray-500 line-through ml-2">5,000,000 UZS</span>
-                            <span class="text-gray-500 text-sm mt-2 block">Then: 5,000,000 UZS</span>
+                            <span class="text-4xl font-bold" data-translate-key="starter_price_year_1">3,990,000 UZS / 1st year</span>
+                            <span class="text-gray-500 line-through ml-2" data-translate-key="starter_price_old">5,000,000 UZS</span>
+                            <span class="text-gray-500 text-sm mt-2 block" data-translate-key="starter_price_then">Then: 5,000,000 UZS</span>
                         </div>
                         <ul class="mt-8 space-y-4 text-gray-700 flex-grow">
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                20 GB Storage
+                                <span data-translate-key="storage_20gb">20 GB Storage</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                256 MB SQL
+                                <span data-translate-key="sql_256mb">256 MB SQL</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                512MB RAM
+                                <span data-translate-key="ram_512mb">512MB RAM</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                0.5 CPU
+                                <span data-translate-key="cpu_0_5">0.5 CPU</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="mt-8 w-full text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-200 transition-colors">Choose Plan</a>
+                        <a href="#contact" class="mt-8 w-full text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-200 transition-colors" data-translate-key="choose_plan">Choose Plan</a>
                     </div>
 
                     <!-- Standard Plan (Highlighted) -->
                     <div class="bg-black text-white rounded-2xl p-8 shadow-2xl transform scale-105 flex flex-col relative">
-                        <span class="absolute top-0 right-8 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-b-lg">Most Popular</span>
-                        <h3 class="text-2xl font-bold">Standard</h3>
-                        <p class="mt-4 text-gray-400">Perfect for growing businesses.</p>
+                        <span class="absolute top-0 right-8 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-b-lg" data-translate-key="most_popular">Most Popular</span>
+                        <h3 class="text-2xl font-bold" data-translate-key="standard_plan">Standard</h3>
+                        <p class="mt-4 text-gray-400" data-translate-key="standard_description">Perfect for growing businesses.</p>
                         <div class="mt-6">
-                            <span class="text-4xl font-bold">4,990,000 UZS / 1st year</span>
-                            <span class="text-gray-400 line-through ml-2">7,000,000 UZS</span>
-                            <span class="text-gray-400 text-sm mt-2 block">Then: 7,000,000 UZS</span>
+                            <span class="text-4xl font-bold" data-translate-key="standard_price_year_1">4,990,000 UZS / 1st year</span>
+                            <span class="text-gray-400 line-through ml-2" data-translate-key="standard_price_old">7,000,000 UZS</span>
+                            <span class="text-gray-400 text-sm mt-2 block" data-translate-key="standard_price_then">Then: 7,000,000 UZS</span>
                         </div>
                         <ul class="mt-8 space-y-4 flex-grow">
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                50 GB Storage
+                                <span data-translate-key="storage_50gb">50 GB Storage</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                256 MB SQL
+                                <span data-translate-key="sql_256mb">256 MB SQL</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                1 GB RAM
+                                <span data-translate-key="ram_1gb">1 GB RAM</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                1 CPU
+                                <span data-translate-key="cpu_1">1 CPU</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="mt-8 w-full text-center bg-blue-500 text-white font-semibold py-3 rounded-lg hover:bg-blue-600 transition-colors">Choose Plan</a>
+                        <a href="#contact" class="mt-8 w-full text-center bg-blue-500 text-white font-semibold py-3 rounded-lg hover:bg-blue-600 transition-colors" data-translate-key="choose_plan">Choose Plan</a>
                     </div>
 
                     <!-- Business Plan -->
                     <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-900">Business</h3>
-                        <p class="mt-4 text-gray-500">For established businesses and teams.</p>
+                        <h3 class="text-2xl font-bold text-gray-900" data-translate-key="business_plan">Business</h3>
+                        <p class="mt-4 text-gray-500" data-translate-key="business_description">For established businesses and teams.</p>
                         <div class="mt-6">
-                            <span class="text-4xl font-bold">7,990,000 UZS / 1st year</span>
-                            <span class="text-gray-500 line-through ml-2">12,000,000 UZS</span>
-                            <span class="text-gray-500 text-sm mt-2 block">Then: 12,000,000 UZS</span>
+                            <span class="text-4xl font-bold" data-translate-key="business_price_year_1">7,990,000 UZS / 1st year</span>
+                            <span class="text-gray-500 line-through ml-2" data-translate-key="business_price_old">12,000,000 UZS</span>
+                            <span class="text-gray-500 text-sm mt-2 block" data-translate-key="business_price_then">Then: 12,000,000 UZS</span>
                         </div>
                         <ul class="mt-8 space-y-4 text-gray-700 flex-grow">
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                100 GB Storage
+                                <span data-translate-key="storage_100gb">100 GB Storage</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                1 GB SQL
+                                <span data-translate-key="sql_1gb">1 GB SQL</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                2 GB RAM
+                                <span data-translate-key="ram_2gb">2 GB RAM</span>
                             </li>
                             <li class="flex items-center">
                                 <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                1 CPU
+                                <span data-translate-key="cpu_1">1 CPU</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="mt-8 w-full text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-200 transition-colors">Choose Plan</a>
+                        <a href="#contact" class="mt-8 w-full text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-200 transition-colors" data-translate-key="choose_plan">Choose Plan</a>
                     </div>
                 </div>
 
@@ -302,11 +312,11 @@
                 <div class="mt-16 bg-white border border-gray-200 rounded-2xl p-10 shadow-sm">
                     <div class="md:flex md:items-center md:justify-between text-center md:text-left">
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Enterprise Solutions</h3>
-                            <p class="mt-2 text-gray-600">For large-scale deployments, we offer custom hardware and software solutions.</p>
+                            <h3 class="text-2xl font-bold text-gray-900" data-translate-key="enterprise_solutions">Enterprise Solutions</h3>
+                            <p class="mt-2 text-gray-600" data-translate-key="enterprise_description">For large-scale deployments, we offer custom hardware and software solutions.</p>
                         </div>
                         <div class="mt-6 md:mt-0">
-                            <a href="#contact" class="btn inline-block">Contact Us</a>
+                            <a href="#contact" class="btn inline-block" data-translate-key="contact_us">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -316,7 +326,7 @@
         <!-- Contact Form Section -->
         <section id="contact" class="py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12">Leave an Application</h2>
+                <h2 class="text-4xl font-bold text-center mb-12" data-translate-key="leave_application">Leave an Application</h2>
                 <div class="max-w-xl mx-auto">
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6t_DotP3jgje43jqNcnhwOADItGXfVmUULdDVXK5TYgDz-w/viewform?embedded=true" class="w-full" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
@@ -332,8 +342,8 @@
                 <p>help@58apps.online</p>
                 <p>+998 88 048 50 57</p>
             </div>
-            <p class="text-gray-500">&copy; 2025 IDonly. All rights reserved.</p>
-            <p class="text-gray-500 mt-2">Powered by <a href="https://58apps.online" target="_blank" rel="noopener noreferrer" class="hover:text-white">58apps.online</a></p>
+            <p class="text-gray-500" data-translate-key="footer_copyright">&copy; 2025 IDonly. All rights reserved.</p>
+            <p class="text-gray-500 mt-2"><span data-translate-key="powered_by">Powered by</span> <a href="https://58apps.online" target="_blank" rel="noopener noreferrer" class="hover:text-white">58apps.online</a></p>
         </div>
     </footer>
 
@@ -476,6 +486,207 @@
                     setupInfiniteScroll();
                 }
             });
+        });
+    </script>
+
+    <script>
+        const translations = {
+            "en": {
+                "page_title": "IDonly - Secure Attendance Tracking.",
+                "nav_about": "About",
+                "nav_security": "Security",
+                "nav_pricing": "Pricing",
+                "nav_contact": "Contact",
+                "get_started": "Get Started",
+                "best_suited_for": "Best Suited For",
+                "offices": "Offices",
+                "educational_institutions": "Educational Institutions",
+                "small_businesses": "Small Businesses",
+                "large_businesses": "Large Businesses",
+                "medical_centers": "Medical Centers",
+                "security_title": "Multi-Layered Security You Can Trust",
+                "encryption_title": "Advanced Image Encryption",
+                "encryption_description": "Your visual data is protected with state-of-the-art encryption and stored in a secure, private cloud environment. We ensure that all images are handled with the utmost confidentiality and integrity, safeguarding them from unauthorized access.",
+                "data_protection_title": "Comprehensive Data Protection",
+                "data_protection_description": "We employ multi-layered security for all sensitive information, including names, arrival times, and other personal data. Our robust infrastructure ensures your data is encrypted both in transit and at rest, providing a secure and trustworthy solution.",
+                "platform_security_title": "Robust Platform Security",
+                "platform_security_description": "Our application is built on a foundation of proven security practices, utilizing the strengths of Django and Render, and secured with SSL encryption. This multi-faceted approach protects against a wide range of cyber threats, ensuring the reliability and safety of our platform.",
+                "pricing_title": "Flexible Pricing for Every Need",
+                "pricing_subtitle": "From small businesses to large enterprises, we have a plan that fits your requirements.",
+                "starter_plan": "Starter",
+                "starter_description": "Ideal for new businesses getting started.",
+                "starter_price_year_1": "3,990,000 UZS / 1st year",
+                "starter_price_old": "5,000,000 UZS",
+                "starter_price_then": "Then: 5,000,000 UZS",
+                "storage_20gb": "20 GB Storage",
+                "sql_256mb": "256 MB SQL",
+                "ram_512mb": "512MB RAM",
+                "cpu_0_5": "0.5 CPU",
+                "choose_plan": "Choose Plan",
+                "most_popular": "Most Popular",
+                "standard_plan": "Standard",
+                "standard_description": "Perfect for growing businesses.",
+                "standard_price_year_1": "4,990,000 UZS / 1st year",
+                "standard_price_old": "7,000,000 UZS",
+                "standard_price_then": "Then: 7,000,000 UZS",
+                "storage_50gb": "50 GB Storage",
+                "ram_1gb": "1 GB RAM",
+                "cpu_1": "1 CPU",
+                "business_plan": "Business",
+                "business_description": "For established businesses and teams.",
+                "business_price_year_1": "7,990,000 UZS / 1st year",
+                "business_price_old": "12,000,000 UZS",
+                "business_price_then": "Then: 12,000,000 UZS",
+                "storage_100gb": "100 GB Storage",
+                "sql_1gb": "1 GB SQL",
+                "ram_2gb": "2 GB RAM",
+                "enterprise_solutions": "Enterprise Solutions",
+                "enterprise_description": "For large-scale deployments, we offer custom hardware and software solutions.",
+                "contact_us": "Contact Us",
+                "leave_application": "Leave an Application",
+                "footer_copyright": "&copy; 2025 IDonly. All rights reserved.",
+                "powered_by": "Powered by"
+            },
+            "ru": {
+                "page_title": "IDonly - Безопасный учет посещаемости.",
+                "nav_about": "О нас",
+                "nav_security": "Безопасность",
+                "nav_pricing": "Цены",
+                "nav_contact": "Контакты",
+                "get_started": "Начать",
+                "best_suited_for": "Лучше всего подходит для",
+                "offices": "Офисы",
+                "educational_institutions": "Образовательные учреждения",
+                "small_businesses": "Малый бизнес",
+                "large_businesses": "Крупный бизнес",
+                "medical_centers": "Медицинские центры",
+                "security_title": "Многоуровневая безопасность, которой можно доверять",
+                "encryption_title": "Надёжное шифрование изображений",
+                "encryption_description": "Ваши визуальные данные защищены современным шифрованием и хранятся в безопасной частной облачной среде. Мы гарантируем, что все изображения обрабатываются с максимальной конфиденциальностью и целостностью, защищая их от несанкционированного доступа.",
+                "data_protection_title": "Комплексная защита данных",
+                "data_protection_description": "Мы используем многоуровневую безопасность для всей конфиденциальной информации, включая имена, время прибытия и другие личные данные. Наша надежная инфраструктура обеспечивает шифрование ваших данных как при передаче, так и при хранении, предоставляя безопасное и надежное решение.",
+                "platform_security_title": "Надежная безопасность платформы",
+                "platform_security_description": "Наше приложение построено на основе проверенных методов обеспечения безопасности, используя преимущества Django и Render, и защищено SSL-шифрованием. Этот многогранный подход защищает от широкого спектра киберугроз, обеспечивая надежность и безопасность нашей платформы.",
+                "pricing_title": "Гибкие цены для любых нужд",
+                "pricing_subtitle": "От малого бизнеса до крупных предприятий — у нас есть план, который соответствует вашим требованиям.",
+                "starter_plan": "Стартовый",
+                "starter_description": "Идеально подходит для новых предприятий.",
+                "starter_price_year_1": "3 990 000 UZS / 1-й год",
+                "starter_price_old": "5 000 000 UZS",
+                "starter_price_then": "Затем: 5 000 000 UZS",
+                "storage_20gb": "20 ГБ хранилища",
+                "sql_256mb": "256 МБ SQL",
+                "ram_512mb": "512 МБ ОЗУ",
+                "cpu_0_5": "0.5 ЦП",
+                "choose_plan": "Выбрать план",
+                "most_popular": "Самый популярный",
+                "standard_plan": "Стандартный",
+                "standard_description": "Идеально подходит для растущего бизнеса.",
+                "standard_price_year_1": "4 990 000 UZS / 1-й год",
+                "standard_price_old": "7 000 000 UZS",
+                "standard_price_then": "Затем: 7 000 000 UZS",
+                "storage_50gb": "50 ГБ хранилища",
+                "ram_1gb": "1 ГБ ОЗУ",
+                "cpu_1": "1 ЦП",
+                "business_plan": "Бизнес",
+                "business_description": "Для состоявшихся компаний и команд.",
+                "business_price_year_1": "7 990 000 UZS / 1-й год",
+                "business_price_old": "12 000 000 UZS",
+                "business_price_then": "Затем: 12 000 000 UZS",
+                "storage_100gb": "100 ГБ хранилища",
+                "sql_1gb": "1 ГБ SQL",
+                "ram_2gb": "2 ГБ ОЗУ",
+                "enterprise_solutions": "Корпоративные решения",
+                "enterprise_description": "Для крупномасштабных развертываний мы предлагаем индивидуальные аппаратные и программные решения.",
+                "contact_us": "Связаться с нами",
+                "leave_application": "Оставить заявку",
+                "footer_copyright": "&copy; 2025 IDonly. Все права защищены.",
+                "powered_by": "Работает на"
+            },
+            "uz": {
+                "page_title": "IDonly - Xavfsiz davomatni kuzatish.",
+                "nav_about": "Biz haqimizda",
+                "nav_security": "Xavfsizlik",
+                "nav_pricing": "Narxlar",
+                "nav_contact": "Aloqa",
+                "get_started": "Boshlash",
+                "best_suited_for": "Eng mos keladi",
+                "offices": "Ofislar",
+                "educational_institutions": "Ta'lim muassasalari",
+                "small_businesses": "Kichik biznes",
+                "large_businesses": "Katta biznes",
+                "medical_centers": "Tibbiyot markazlari",
+                "security_title": "Ishonchli ko'p qatlamli xavfsizlik",
+                "encryption_title": "Kengaytirilgan tasvir shifrlash",
+                "encryption_description": "Sizning vizual ma'lumotlaringiz zamonaviy shifrlash bilan himoyalangan va xavfsiz, shaxsiy bulut muhitida saqlanadi. Biz barcha tasvirlarning maksimal maxfiylik va yaxlitlik bilan ishlanishini, ularni ruxsatsiz kirishdan himoya qilishni ta'minlaymiz.",
+                "data_protection_title": "Keng qamrovli ma'lumotlarni himoya qilish",
+                "data_protection_description": "Biz barcha maxfiy ma'lumotlar, jumladan ismlar, kelish vaqtlari va boshqa shaxsiy ma'lumotlar uchun ko'p qatlamli xavfsizlikni qo'llaymiz. Bizning mustahkam infratuzilmamiz ma'lumotlaringizni uzatishda ham, saqlashda ham shifrlanganligini ta'minlaydi, bu esa xavfsiz va ishonchli yechimni taqdim etadi.",
+                "platform_security_title": "Kuchli platforma xavfsizligi",
+                "platform_security_description": "Bizning ilovamiz Django va Renderning kuchli tomonlaridan foydalangan holda, tasdiqlangan xavfsizlik amaliyotlari asosida qurilgan va SSL shifrlash bilan himoyalangan. Bu ko'p qirrali yondashuv keng ko'lamli kiberxavfsizlik tahdidlaridan himoya qiladi, platformamizning ishonchliligi va xavfsizligini ta'minlaydi.",
+                "pricing_title": "Har qanday ehtiyoj uchun moslashuvchan narxlar",
+                "pricing_subtitle": "Kichik biznesdan tortib yirik korxonalargacha, bizda sizning talablaringizga mos keladigan reja mavjud.",
+                "starter_plan": "Boshlang'ich",
+                "starter_description": "Yangi boshlayotgan bizneslar uchun ideal.",
+                "starter_price_year_1": "3,990,000 UZS / 1-yil",
+                "starter_price_old": "5,000,000 UZS",
+                "starter_price_then": "Keyin: 5,000,000 UZS",
+                "storage_20gb": "20 GB xotira",
+                "sql_256mb": "256 MB SQL",
+                "ram_512mb": "512MB RAM",
+                "cpu_0_5": "0.5 CPU",
+                "choose_plan": "Rejani tanlash",
+                "most_popular": "Eng mashhur",
+                "standard_plan": "Standart",
+                "standard_description": "O'sib borayotgan bizneslar uchun mukammal.",
+                "standard_price_year_1": "4,990,000 UZS / 1-yil",
+                "standard_price_old": "7,000,000 UZS",
+                "standard_price_then": "Keyin: 7,000,000 UZS",
+                "storage_50gb": "50 GB xotira",
+                "ram_1gb": "1 GB RAM",
+                "cpu_1": "1 CPU",
+                "business_plan": "Biznes",
+                "business_description": "Tashkil etilgan kompaniyalar va jamoalar uchun.",
+                "business_price_year_1": "7,990,000 UZS / 1-yil",
+                "business_price_old": "12,000,000 UZS",
+                "business_price_then": "Keyin: 12,000,000 UZS",
+                "storage_100gb": "100 GB xotira",
+                "sql_1gb": "1 GB SQL",
+                "ram_2gb": "2 GB RAM",
+                "enterprise_solutions": "Korporativ yechimlar",
+                "enterprise_description": "Katta miqyosdagi joylashtirishlar uchun biz maxsus apparat va dasturiy ta'minot yechimlarini taklif qilamiz.",
+                "contact_us": "Biz bilan bog'lanish",
+                "leave_application": "Ariza qoldirish",
+                "footer_copyright": "&copy; 2025 IDonly. Barcha huquqlar himoyalangan.",
+                "powered_by": "Qo'llab-quvvatlanadi"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'TITLE') {
+                        element.textContent = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageSwitcher = document.getElementById('language-switcher');
+            if (languageSwitcher) {
+                // Set initial language based on the switcher's current value
+                setLanguage(languageSwitcher.value.toLowerCase());
+
+                languageSwitcher.addEventListener('change', (event) => {
+                    const selectedLang = event.target.value.toLowerCase();
+                    setLanguage(selectedLang);
+                    console.log(`Language changed to: ${selectedLang}`);
+                });
+            }
         });
     </script>
 
