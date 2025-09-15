@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hikvision ACS Face Terminals Software</title>
+    <title>IDonly - Secure Attendance Tracking.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
@@ -123,38 +127,63 @@
         </section>
 
         <!-- About Section -->
+        <!-- Best Suited For Section -->
         <section id="about" class="py-16 bg-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-4">Control and Monitor with Ease</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Our software connects to your Hikvision face terminals to provide a seamless solution for businesses and schools. Track employee attendance or monitor student arrivals and departures, with optional notifications for parents. All data is collected, stored, and easily accessible for viewing, exporting, and analysis.
-                </p>
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center">Best Suited For</h2>
+                <div id="cards-container" class="flex flex-wrap justify-center gap-8">
+                    <!-- Office Card -->
+                    <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Office Building Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h6m-6 4h6m-6 4h6m0-4v-4m0 4V7"></path></svg>
+                        <h3 class="text-lg font-semibold">Offices</h3>
+                    </div>
+                    <!-- Educational Institutions Card -->
+                    <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Educational Institution Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0121 18.782V21M3 10.582A12.083 12.083 0 018.84 14M12 14v7m0 0l-9-5 9-5 9 5-9 5z"></path></svg>
+                        <h3 class="text-lg font-semibold">Educational Institutions</h3>
+                    </div>
+                    <!-- Small Businesses Card -->
+                    <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Small Business Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        <h3 class="text-lg font-semibold">Small Businesses</h3>
+                    </div>
+                    <!-- Large Businesses Card -->
+                    <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Large Business Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h6m-6 4h6m-6 4h6m0-4v-4m0 4V7"></path></svg>
+                        <h3 class="text-lg font-semibold">Large Businesses</h3>
+                    </div>
+                    <!-- Medical Centers Card -->
+                    <div class="flex-shrink-0 w-48 bg-gray-100 rounded-lg p-6 text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Medical Center Icon</title><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 8v.01M12 8v.01M16 8v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-lg font-semibold">Medical Centers</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Security Section -->
         <section id="security" class="py-16 bg-gray-100">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-20">Multi-Layered Security You Can Trust</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-20">Multi-Layered Security You Can Trust</h2>
             </div>
             <div class="container mx-auto px-4">
-                <div class="relative" style="padding-bottom: 20rem;">
+                <div class="relative">
                     <div class="sticky top-24 mb-12">
                         <div class="bg-gradient-to-br from-purple-600 to-blue-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4">Secure Image Storage</h3>
-                            <p class="text-xl max-w-3xl mx-auto">Photos are stored securely in an S3 bucket, a leading cloud storage solution, ensuring your data is safe and private.</p>
+                            <h3 class="font-bold text-3xl mb-4">Advanced Image Encryption</h3>
+                            <p class="text-xl max-w-3xl mx-auto">Your visual data is protected with state-of-the-art encryption and stored in a secure, private cloud environment. We ensure that all images are handled with the utmost confidentiality and integrity, safeguarding them from unauthorized access.</p>
                         </div>
                     </div>
                     <div class="sticky top-28 mb-12">
                         <div class="bg-gradient-to-br from-green-500 to-teal-400 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4">Encrypted Data</h3>
-                            <p class="text-xl max-w-3xl mx-auto">Sensitive information is protected in a PostgreSQL database, known for its robustness and security features.</p>
+                            <h3 class="font-bold text-3xl mb-4">Comprehensive Data Protection</h3>
+                            <p class="text-xl max-w-3xl mx-auto">We employ multi-layered security for all sensitive information, including names, arrival times, and other personal data. Our robust infrastructure ensures your data is encrypted both in transit and at rest, providing a secure and trustworthy solution.</p>
                         </div>
                     </div>
                     <div class="sticky top-32">
                         <div class="bg-gradient-to-br from-red-500 to-yellow-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4">Platform Protection</h3>
-                            <p class="text-xl max-w-3xl mx-auto">Our application is shielded by multiple layers of security provided by Django, Render.com, and SSL encryption.</p>
+                            <h3 class="font-bold text-3xl mb-4">Robust Platform Security</h3>
+                            <p class="text-xl max-w-3xl mx-auto">Our application is built on a foundation of proven security practices, utilizing the strengths of Django and Render, and secured with SSL encryption. This multi-faceted approach protects against a wide range of cyber threats, ensuring the reliability and safety of our platform.</p>
                         </div>
                     </div>
                 </div>
@@ -162,61 +191,115 @@
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="py-16 bg-white">
+        <section id="pricing" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Yearly Flexible Pricing for Every Need</h2>
+                    <p class="text-gray-600 text-lg">
+                        From small businesses to large enterprises, we have a plan that fits your requirements.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid md:grid-cols-3 gap-8">
                     <!-- Starter Plan -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                        <h3 class="font-bold text-2xl mb-4">Starter</h3>
-                        <p class="text-4xl font-bold mb-4">2,456,161.2 UZS</p>
-                        <p class="text-gray-500 line-through mb-6">4,000,000 UZS</p>
-                        <ul class="text-left space-y-2 mb-8">
-                            <li>256 MB SQL</li>
-                            <li>20 GB Storage</li>
-                            <li>512MB RAM</li>
-                            <li>0.5 CPU</li>
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-900">Starter</h3>
+                        <p class="mt-4 text-gray-500">Ideal for new businesses getting started.</p>
+                        <div class="mt-6">
+                            <span class="text-4xl font-bold">3,996,190 UZS</span>
+                            <span class="text-gray-500 line-through ml-2">4,000,000 UZS</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 text-gray-700 flex-grow">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                20 GB Storage
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                256 MB SQL
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                512MB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                0.5 CPU
+                            </li>
                         </ul>
-                        <a href="#contact" class="btn">Choose Plan</a>
+                        <a href="#contact" class="mt-8 w-full text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-200 transition-colors">Choose Plan</a>
                     </div>
-                    <!-- Standard Plan -->
-                    <div class="bg-black text-white p-8 rounded-lg shadow-xl text-center transform scale-105">
-                        <h3 class="font-bold text-2xl mb-4">Standard</h3>
-                        <p class="text-4xl font-bold mb-4">4,327,380 UZS</p>
-                        <p class="text-gray-400 line-through mb-6">6,000,000 UZS</p>
-                        <ul class="text-left space-y-2 mb-8">
-                            <li>256 MB SQL</li>
-                            <li>35 GB Storage</li>
-                            <li>1 GB RAM</li>
-                            <li>1 CPU</li>
+
+                    <!-- Standard Plan (Highlighted) -->
+                    <div class="bg-black text-white rounded-2xl p-8 shadow-2xl transform scale-105 flex flex-col relative">
+                        <span class="absolute top-0 right-8 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-b-lg">Most Popular</span>
+                        <h3 class="text-2xl font-bold">Standard</h3>
+                        <p class="mt-4 text-gray-400">Perfect for growing businesses.</p>
+                        <div class="mt-6">
+                            <span class="text-4xl font-bold">5,890,000 UZS</span>
+                            <span class="text-gray-400 line-through ml-2">6,000,000 UZS</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 flex-grow">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                50 GB Storage
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                256 MB SQL
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                1 GB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                1 CPU
+                            </li>
                         </ul>
-                        <a href="#contact" class="btn bg-white text-black">Choose Plan</a>
+                        <a href="#contact" class="mt-8 w-full text-center bg-blue-500 text-white font-semibold py-3 rounded-lg hover:bg-blue-600 transition-colors">Choose Plan</a>
                     </div>
+
                     <!-- Business Plan -->
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-                        <h3 class="font-bold text-2xl mb-4">Business</h3>
-                        <p class="text-4xl font-bold mb-4">6,908,886 UZS</p>
-                        <p class="text-gray-500 line-through mb-6">10,000,000 UZS</p>
-                        <ul class="text-left space-y-2 mb-8">
-                            <li>1 GB SQL</li>
-                            <li>100 GB Storage</li>
-                            <li>2 GB RAM</li>
-                            <li>1 CPU</li>
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-900">Business</h3>
+                        <p class="mt-4 text-gray-500">For established businesses and teams.</p>
+                        <div class="mt-6">
+                            <span class="text-4xl font-bold">9,908,886 UZS</span>
+                            <span class="text-gray-500 line-through ml-2">10,000,000 UZS</span>
+                        </div>
+                        <ul class="mt-8 space-y-4 text-gray-700 flex-grow">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                100 GB Storage
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                1 GB SQL
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                2 GB RAM
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                1 CPU
+                            </li>
                         </ul>
-                        <a href="#contact" class="btn">Choose Plan</a>
+                        <a href="#contact" class="mt-8 w-full text-center bg-gray-100 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-200 transition-colors">Choose Plan</a>
                     </div>
                 </div>
-                 <div class="text-center mt-12">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                        <h3 class="font-bold text-2xl mb-4">Enterprise</h3>
-                        <p class="text-xl mb-4">For large-scale deployments, we offer custom solutions.</p>
-                        <ul class="text-center space-y-2 mb-8">
-                            <li>Up to 1 TB SQL</li>
-                            <li>Up to 500 TB Storage</li>
-                            <li>Up to 32 GB RAM</li>
-                            <li>Up to 8 CPU</li>
-                        </ul>
-                        <a href="#contact" class="btn">Contact Us</a>
+
+                <!-- Enterprise Plan -->
+                <div class="mt-16 bg-white border border-gray-200 rounded-2xl p-10 shadow-sm">
+                    <div class="md:flex md:items-center md:justify-between text-center md:text-left">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Enterprise Solutions</h3>
+                            <p class="mt-2 text-gray-600">For large-scale deployments, we offer custom hardware and software solutions.</p>
+                        </div>
+                        <div class="mt-6 md:mt-0">
+                            <a href="#contact" class="btn inline-block">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,7 +308,7 @@
         <!-- Contact Form Section -->
         <section id="contact" class="py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Leave an Application</h2>
+                <h2 class="text-4xl font-bold text-center mb-12">Leave an Application</h2>
                 <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">
                     <div class="mb-4">
                         <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
@@ -263,7 +346,13 @@
     <!-- Footer -->
     <footer class="bg-black text-white pt-16 pb-8 px-4">
         <div class="container mx-auto text-center">
-            <p>&copy; 2025 Hikvision ACS Solutions. All rights reserved.</p>
+            <img src="favicon.png" alt="Logo" class="h-8 mx-auto mb-4">
+            <div class="my-4 text-gray-400">
+                <p>help@58apps.online</p>
+                <p>+998 88 048 50 57</p>
+            </div>
+            <p class="text-gray-500">&copy; 2025 IDonly. All rights reserved.</p>
+            <p class="text-gray-500 mt-2">Powered by <a href="https://58apps.online" target="_blank" rel="noopener noreferrer" class="hover:text-white">58apps.online</a></p>
         </div>
     </footer>
 
@@ -305,6 +394,46 @@
         setInterval(nextSlide, 5000); // Auto-scroll every 5 seconds
 
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const pricingSection = document.getElementById('pricing');
+          const contactForm = document.getElementById('contact');
+          const tariffSelect = document.getElementById('tariff');
+
+          if (pricingSection && contactForm && tariffSelect) {
+            pricingSection.addEventListener('click', (event) => {
+              const target = event.target;
+              const choosePlanButton = target.closest('a[href="#contact"]');
+
+              if (choosePlanButton) {
+                event.preventDefault();
+
+                const planContainer = choosePlanPlanButton.closest('.bg-white, .bg-black');
+                if (planContainer) {
+                  const planNameElement = planContainer.querySelector('h3');
+                  if (planNameElement) {
+                    let planName = planNameElement.textContent.trim();
+
+                    if (planName === 'Enterprise Solutions') {
+                      planName = 'Enterprise';
+                    }
+
+                    const optionExists = Array.from(tariffSelect.options).some(option => option.value === planName);
+                    if (optionExists) {
+                        tariffSelect.value = planName;
+                    }
+                  }
+                }
+
+                contactForm.scrollIntoView({ behavior: 'smooth' });
+              }
+            });
+          }
+        });
+    </script>
+
+    
 
 </body>
 </html>
