@@ -80,6 +80,15 @@
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-gradient {
+            background-size: 200% 200%;
+            animation: gradient-animation 5s ease infinite;
+        }
     </style>
 </head>
 <body class="text-gray-900">
@@ -94,7 +103,6 @@
                     </a>
                     <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
                         <a href="#about" class="hover:text-black" data-translate-key="nav_about">About</a>
-                        <a href="#security" class="hover:text-black" data-translate-key="nav_security">Security</a>
                         <a href="#pricing" class="hover:text-black" data-translate-key="nav_pricing">Pricing</a>
                         <a href="#contact" class="hover:text-black" data-translate-key="nav_contact">Contact</a>
                     </nav>
@@ -103,8 +111,8 @@
                     <div class="relative flex items-center">
                         <select id="language-switcher" class="block appearance-none bg-white border border-gray-300 hover:border-gray-400 w-10 h-10 p-0 rounded-full shadow leading-tight focus:outline-none focus:shadow-outline text-xs font-semibold text-gray-700 text-center sm:w-12 sm:h-12 sm:text-sm">
                             <option value="en">EN</option>
-                            <option value="uz">UZ</option>
                             <option value="ru">RU</option>
+                            <option value="uz">UZ</option>
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-1 text-gray-700">
                             <svg class="fill-current h-3 w-3 sm:h-4 sm:w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -136,9 +144,8 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <!-- Best Suited For Section -->
-        <section id="about" class="py-16 bg-white">
+        <section id="suited" class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center" data-translate-key="best_suited_for">Best Suited For</h2>
                 <div id="cards-container" class="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-8 overflow-x-auto scrollbar-hide py-4">
@@ -176,29 +183,29 @@
             </div>
         </section>
 
-        <!-- Security Section -->
-        <section id="security" class="py-16 bg-gray-100">
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-gray-100">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold text-gray-900 mb-20" data-translate-key="security_title">Multi-Layered Security You Can Trust</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-20" data-translate-key="about_product_title">About the product</h2>
             </div>
             <div class="container mx-auto px-4">
                 <div class="relative">
                     <div class="sticky top-24 mb-12">
-                        <div class="bg-gradient-to-br from-purple-600 to-blue-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4" data-translate-key="encryption_title">Advanced Image Encryption</h3>
-                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="encryption_description">Your visual data is protected with state-of-the-art encryption and stored in a secure, private cloud environment. We ensure that all images are handled with the utmost confidentiality and integrity, safeguarding them from unauthorized access.</p>
+                        <div class="animated-gradient bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
+                            <h3 class="font-bold text-3xl mb-4" data-translate-key="clean_modern_interface_title"><strong>Clean, Modern</strong> Interface✨</h3>
+                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="clean_modern_interface_desc">No old-school, complicated design.</p>
                         </div>
                     </div>
                     <div class="sticky top-28 mb-12">
-                        <div class="bg-gradient-to-br from-green-500 to-teal-400 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4" data-translate-key="data_protection_title">Comprehensive Data Protection</h3>
-                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="data_protection_description">We employ multi-layered security for all sensitive information, including names, arrival times, and other personal data. Our robust infrastructure ensures your data is encrypted both in transit and at rest, providing a secure and trustworthy solution.</p>
+                        <div class="animated-gradient bg-gradient-to-br from-green-400 via-cyan-500 to-blue-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
+                            <h3 class="font-bold text-3xl mb-4" data-translate-key="easy_setup_title">Easy Setup and Control⚡️</h3>
+                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="easy_setup_desc">Manage your employees with ease. <br>For schools, we offer a mobile app for parents to track their children.</p>
                         </div>
                     </div>
                     <div class="sticky top-32">
-                        <div class="bg-gradient-to-br from-red-500 to-yellow-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
-                            <h3 class="font-bold text-3xl mb-4" data-translate-key="platform_security_title">Robust Platform Security</h3>
-                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="platform_security_description">Our application is built on a foundation of proven security practices, utilizing the strengths of Django and Render, and secured with SSL encryption. This multi-faceted approach protects against a wide range of cyber threats, ensuring the reliability and safety of our platform.</p>
+                        <div class="animated-gradient bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-12 rounded-2xl shadow-lg text-center text-white aspect-[16/9] flex flex-col justify-center">
+                            <h3 class="font-bold text-3xl mb-4" data-translate-key="security_title">Multi-layered Security🔒</h3>
+                            <p class="text-xl max-w-3xl mx-auto" data-translate-key="security_desc">We understand how important it is for companies to keep their data confidential. <br>That's why we keep our service up-to-date with latest security measures.</p>
                         </div>
                     </div>
                 </div>
@@ -282,7 +289,7 @@
                         <h3 class="text-2xl font-bold text-gray-900" data-translate-key="business_plan">Business</h3>
                         <p class="mt-4 text-gray-500" data-translate-key="business_description">For established businesses and teams.</p>
                         <div class="mt-6">
-                            <span class="text-4xl font-bold" data-translate-key="business_price_year_1">7,990,000 UZS / 1st year</span>
+                            <span class="text-4xl font-bold" data-translate-key="business_price_year_1">6,990,000 UZS / 1st year</span>
                             <span class="text-gray-500 line-through ml-2" data-translate-key="business_price_old">12,000,000 UZS</span>
                             <span class="text-gray-500 text-sm mt-2 block" data-translate-key="business_price_then">Then: 12,000,000 UZS</span>
                         </div>
@@ -488,209 +495,203 @@
             });
         });
     </script>
-
     <script>
-        const translations = {
-            "en": {
-                "page_title": "IDonly - Secure Attendance Tracking.",
-                "nav_about": "About",
-                "nav_security": "Security",
-                "nav_pricing": "Pricing",
-                "nav_contact": "Contact",
-                "get_started": "Get Started",
-                "best_suited_for": "Best Suited For",
-                "offices": "Offices",
-                "educational_institutions": "Educational Institutions",
-                "small_businesses": "Small Businesses",
-                "large_businesses": "Large Businesses",
-                "medical_centers": "Medical Centers",
-                "security_title": "Multi-Layered Security You Can Trust",
-                "encryption_title": "Advanced Image Encryption",
-                "encryption_description": "Your visual data is protected with state-of-the-art encryption and stored in a secure, private cloud environment. We ensure that all images are handled with the utmost confidentiality and integrity, safeguarding them from unauthorized access.",
-                "data_protection_title": "Comprehensive Data Protection",
-                "data_protection_description": "We employ multi-layered security for all sensitive information, including names, arrival times, and other personal data. Our robust infrastructure ensures your data is encrypted both in transit and at rest, providing a secure and trustworthy solution.",
-                "platform_security_title": "Robust Platform Security",
-                "platform_security_description": "Our application is built on a foundation of proven security practices, utilizing the strengths of Django and Render, and secured with SSL encryption. This multi-faceted approach protects against a wide range of cyber threats, ensuring the reliability and safety of our platform.",
-                "pricing_title": "Flexible Pricing for Every Need",
-                "pricing_subtitle": "From small businesses to large enterprises, we have a plan that fits your requirements.",
-                "starter_plan": "Starter",
-                "starter_description": "Ideal for new businesses getting started.",
-                "starter_price_year_1": "3,990,000 UZS / 1st year",
-                "starter_price_old": "5,000,000 UZS",
-                "starter_price_then": "Then: 5,000,000 UZS",
-                "storage_20gb": "20 GB Storage",
-                "sql_256mb": "256 MB SQL",
-                "ram_512mb": "512MB RAM",
-                "cpu_0_5": "0.5 CPU",
-                "choose_plan": "Choose Plan",
-                "most_popular": "Most Popular",
-                "standard_plan": "Standard",
-                "standard_description": "Perfect for growing businesses.",
-                "standard_price_year_1": "4,990,000 UZS / 1st year",
-                "standard_price_old": "7,000,000 UZS",
-                "standard_price_then": "Then: 7,000,000 UZS",
-                "storage_50gb": "50 GB Storage",
-                "ram_1gb": "1 GB RAM",
-                "cpu_1": "1 CPU",
-                "business_plan": "Business",
-                "business_description": "For established businesses and teams.",
-                "business_price_year_1": "7,990,000 UZS / 1st year",
-                "business_price_old": "12,000,000 UZS",
-                "business_price_then": "Then: 12,000,000 UZS",
-                "storage_100gb": "100 GB Storage",
-                "sql_1gb": "1 GB SQL",
-                "ram_2gb": "2 GB RAM",
-                "enterprise_solutions": "Enterprise Solutions",
-                "enterprise_description": "For large-scale deployments, we offer custom hardware and software solutions.",
-                "contact_us": "Contact Us",
-                "leave_application": "Leave an Application",
-                "footer_copyright": "&copy; 2025 IDonly. All rights reserved.",
-                "powered_by": "Powered by"
-            },
-            "ru": {
-                "page_title": "IDonly - Безопасный учет посещаемости.",
-                "nav_about": "О нас",
-                "nav_security": "Безопасность",
-                "nav_pricing": "Цены",
-                "nav_contact": "Контакты",
-                "get_started": "Начать",
-                "best_suited_for": "Лучше всего подходит для",
-                "offices": "Офисы",
-                "educational_institutions": "Образовательные учреждения",
-                "small_businesses": "Малый бизнес",
-                "large_businesses": "Крупный бизнес",
-                "medical_centers": "Медицинские центры",
-                "security_title": "Многоуровневая безопасность, которой можно доверять",
-                "encryption_title": "Надёжное шифрование изображений",
-                "encryption_description": "Ваши визуальные данные защищены современным шифрованием и хранятся в безопасной частной облачной среде. Мы гарантируем, что все изображения обрабатываются с максимальной конфиденциальностью и целостностью, защищая их от несанкционированного доступа.",
-                "data_protection_title": "Комплексная защита данных",
-                "data_protection_description": "Мы используем многоуровневую безопасность для всей конфиденциальной информации, включая имена, время прибытия и другие личные данные. Наша надежная инфраструктура обеспечивает шифрование ваших данных как при передаче, так и при хранении, предоставляя безопасное и надежное решение.",
-                "platform_security_title": "Надежная безопасность платформы",
-                "platform_security_description": "Наше приложение построено на основе проверенных методов обеспечения безопасности, используя преимущества Django и Render, и защищено SSL-шифрованием. Этот многогранный подход защищает от широкого спектра киберугроз, обеспечивая надежность и безопасность нашей платформы.",
-                "pricing_title": "Гибкие цены для любых нужд",
-                "pricing_subtitle": "От малого бизнеса до крупных предприятий — у нас есть план, который соответствует вашим требованиям.",
-                "starter_plan": "Стартовый",
-                "starter_description": "Идеально подходит для новых предприятий.",
-                "starter_price_year_1": "3 990 000 UZS / 1-й год",
-                "starter_price_old": "5 000 000 UZS",
-                "starter_price_then": "Затем: 5 000 000 UZS",
-                "storage_20gb": "20 ГБ хранилища",
-                "sql_256mb": "256 МБ SQL",
-                "ram_512mb": "512 МБ ОЗУ",
-                "cpu_0_5": "0.5 ЦП",
-                "choose_plan": "Выбрать план",
-                "most_popular": "Самый популярный",
-                "standard_plan": "Стандартный",
-                "standard_description": "Идеально подходит для растущего бизнеса.",
-                "standard_price_year_1": "4 990 000 UZS / 1-й год",
-                "standard_price_old": "7 000 000 UZS",
-                "standard_price_then": "Затем: 7 000 000 UZS",
-                "storage_50gb": "50 ГБ хранилища",
-                "ram_1gb": "1 ГБ ОЗУ",
-                "cpu_1": "1 ЦП",
-                "business_plan": "Бизнес",
-                "business_description": "Для состоявшихся компаний и команд.",
-                "business_price_year_1": "7 990 000 UZS / 1-й год",
-                "business_price_old": "12 000 000 UZS",
-                "business_price_then": "Затем: 12 000 000 UZS",
-                "storage_100gb": "100 ГБ хранилища",
-                "sql_1gb": "1 ГБ SQL",
-                "ram_2gb": "2 ГБ ОЗУ",
-                "enterprise_solutions": "Корпоративные решения",
-                "enterprise_description": "Для крупномасштабных развертываний мы предлагаем индивидуальные аппаратные и программные решения.",
-                "contact_us": "Связаться с нами",
-                "leave_application": "Оставить заявку",
-                "footer_copyright": "&copy; 2025 IDonly. Все права защищены.",
-                "powered_by": "Работает на"
-            },
-            "uz": {
-                "page_title": "IDonly - Xavfsiz davomatni kuzatish.",
-                "nav_about": "Biz haqimizda",
-                "nav_security": "Xavfsizlik",
-                "nav_pricing": "Narxlar",
-                "nav_contact": "Aloqa",
-                "get_started": "Boshlash",
-                "best_suited_for": "Eng mos keladi",
-                "offices": "Ofislar",
-                "educational_institutions": "Ta'lim muassasalari",
-                "small_businesses": "Kichik biznes",
-                "large_businesses": "Katta biznes",
-                "medical_centers": "Tibbiyot markazlari",
-                "security_title": "Ishonchli ko'p qatlamli xavfsizlik",
-                "encryption_title": "Kengaytirilgan tasvir shifrlash",
-                "encryption_description": "Sizning vizual ma'lumotlaringiz zamonaviy shifrlash bilan himoyalangan va xavfsiz, shaxsiy bulut muhitida saqlanadi. Biz barcha tasvirlarning maksimal maxfiylik va yaxlitlik bilan ishlanishini, ularni ruxsatsiz kirishdan himoya qilishni ta'minlaymiz.",
-                "data_protection_title": "Keng qamrovli ma'lumotlarni himoya qilish",
-                "data_protection_description": "Biz barcha maxfiy ma'lumotlar, jumladan ismlar, kelish vaqtlari va boshqa shaxsiy ma'lumotlar uchun ko'p qatlamli xavfsizlikni qo'llaymiz. Bizning mustahkam infratuzilmamiz ma'lumotlaringizni uzatishda ham, saqlashda ham shifrlanganligini ta'minlaydi, bu esa xavfsiz va ishonchli yechimni taqdim etadi.",
-                "platform_security_title": "Kuchli platforma xavfsizligi",
-                "platform_security_description": "Bizning ilovamiz Django va Renderning kuchli tomonlaridan foydalangan holda, tasdiqlangan xavfsizlik amaliyotlari asosida qurilgan va SSL shifrlash bilan himoyalangan. Bu ko'p qirrali yondashuv keng ko'lamli kiberxavfsizlik tahdidlaridan himoya qiladi, platformamizning ishonchliligi va xavfsizligini ta'minlaydi.",
-                "pricing_title": "Har qanday ehtiyoj uchun moslashuvchan narxlar",
-                "pricing_subtitle": "Kichik biznesdan tortib yirik korxonalargacha, bizda sizning talablaringizga mos keladigan reja mavjud.",
-                "starter_plan": "Boshlang'ich",
-                "starter_description": "Yangi boshlayotgan bizneslar uchun ideal.",
-                "starter_price_year_1": "3,990,000 UZS / 1-yil",
-                "starter_price_old": "5,000,000 UZS",
-                "starter_price_then": "Keyin: 5,000,000 UZS",
-                "storage_20gb": "20 GB xotira",
-                "sql_256mb": "256 MB SQL",
-                "ram_512mb": "512MB RAM",
-                "cpu_0_5": "0.5 CPU",
-                "choose_plan": "Rejani tanlash",
-                "most_popular": "Eng mashhur",
-                "standard_plan": "Standart",
-                "standard_description": "O'sib borayotgan bizneslar uchun mukammal.",
-                "standard_price_year_1": "4,990,000 UZS / 1-yil",
-                "standard_price_old": "7,000,000 UZS",
-                "standard_price_then": "Keyin: 7,000,000 UZS",
-                "storage_50gb": "50 GB xotira",
-                "ram_1gb": "1 GB RAM",
-                "cpu_1": "1 CPU",
-                "business_plan": "Biznes",
-                "business_description": "Tashkil etilgan kompaniyalar va jamoalar uchun.",
-                "business_price_year_1": "7,990,000 UZS / 1-yil",
-                "business_price_old": "12,000,000 UZS",
-                "business_price_then": "Keyin: 12,000,000 UZS",
-                "storage_100gb": "100 GB xotira",
-                "sql_1gb": "1 GB SQL",
-                "ram_2gb": "2 GB RAM",
-                "enterprise_solutions": "Korporativ yechimlar",
-                "enterprise_description": "Katta miqyosdagi joylashtirishlar uchun biz maxsus apparat va dasturiy ta'minot yechimlarini taklif qilamiz.",
-                "contact_us": "Biz bilan bog'lanish",
-                "leave_application": "Ariza qoldirish",
-                "footer_copyright": "&copy; 2025 IDonly. Barcha huquqlar himoyalangan.",
-                "powered_by": "Qo'llab-quvvatlanadi"
-            }
-        };
-
-        function setLanguage(lang) {
-            document.documentElement.lang = lang;
-            document.querySelectorAll('[data-translate-key]').forEach(element => {
-                const key = element.getAttribute('data-translate-key');
-                if (translations[lang] && translations[lang][key]) {
-                    if (element.tagName === 'TITLE') {
-                        element.textContent = translations[lang][key];
-                    } else {
-                        element.textContent = translations[lang][key];
-                    }
-                }
-            });
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            const languageSwitcher = document.getElementById('language-switcher');
-            if (languageSwitcher) {
-                // Set initial language based on the switcher's current value
-                setLanguage(languageSwitcher.value.toLowerCase());
+            const translations = {
+                en: {
+                    page_title: "IDonly - Secure Attendance Tracking.",
+                    nav_about: "About",
+                    nav_pricing: "Pricing",
+                    nav_contact: "Contact",
+                    get_started: "Get Started",
+                    best_suited_for: "Best Suited For",
+                    offices: "Offices",
+                    educational_institutions: "Educational Institutions",
+                    small_businesses: "Small Businesses",
+                    large_businesses: "Large Businesses",
+                    medical_centers: "Medical Centers",
+                    about_product_title: "About the product",
+                    clean_modern_interface_title: "<strong>Clean, Modern</strong> Interface✨",
+                    clean_modern_interface_desc: "No old-school, complicated design.",
+                    easy_setup_title: "Easy Setup and Control⚡️",
+                    easy_setup_desc: "Manage your employees with ease. <br>For schools, we offer a mobile app for parents to track their children.",
+                    security_title: "Multi-layered Security🔒",
+                    security_desc: "We understand how important it is for companies to keep their data confidential. <br>That's why we keep our service up-to-date with latest security measures.",
+                    pricing_title: "Flexible Pricing for Every Need",
+                    pricing_subtitle: "From small businesses to large enterprises, we have a plan that fits your requirements.",
+                    starter_plan: "Starter",
+                    starter_description: "Ideal for new businesses getting started.",
+                    starter_price_year_1: "3,990,000 UZS / 1st year",
+                    starter_price_old: "5,000,000 UZS",
+                    starter_price_then: "Then: 5,000,000 UZS",
+                    storage_20gb: "20 GB Storage",
+                    sql_256mb: "256 MB SQL",
+                    ram_512mb: "512MB RAM",
+                    cpu_0_5: "0.5 CPU",
+                    choose_plan: "Choose Plan",
+                    most_popular: "Most Popular",
+                    standard_plan: "Standard",
+                    standard_description: "Perfect for growing businesses.",
+                    standard_price_year_1: "4,990,000 UZS / 1st year",
+                    standard_price_old: "7,000,000 UZS",
+                    standard_price_then: "Then: 7,000,000 UZS",
+                    storage_50gb: "50 GB Storage",
+                    ram_1gb: "1 GB RAM",
+                    cpu_1: "1 CPU",
+                    business_plan: "Business",
+                    business_description: "For established businesses and teams.",
+                    business_price_year_1: "6,990,000 UZS / 1st year",
+                    business_price_old: "12,000,000 UZS",
+                    business_price_then: "Then: 12,000,000 UZS",
+                    storage_100gb: "100 GB Storage",
+                    sql_1gb: "1 GB SQL",
+                    ram_2gb: "2 GB RAM",
+                    enterprise_solutions: "Enterprise Solutions",
+                    enterprise_description: "For large-scale deployments, we offer custom hardware and software solutions.",
+                    contact_us: "Contact Us",
+                    leave_application: "Leave an Application",
+                    footer_copyright: "&copy; 2025 IDonly. All rights reserved.",
+                    powered_by: "Powered by",
+                    office_building_icon_title: "Office Building Icon",
+                    large_business_icon_title: "Large Business Icon",
+                    medical_center_icon_title: "Medical Center Icon"
+                },
+                ru: {
+                    page_title: "IDonly - Безопасное отслеживание посещаемости.",
+                    nav_about: "О нас",
+                    nav_pricing: "Цены",
+                    nav_contact: "Контакты",
+                    get_started: "Начать",
+                    best_suited_for: "Лучше всего подходит для",
+                    offices: "Офисы",
+                    educational_institutions: "Учебные заведения",
+                    small_businesses: "Малый бизнес",
+                    large_businesses: "Крупный бизнес",
+                    medical_centers: "Медицинские центры",
+                    office_building_icon_title: "Иконка офисного здания",
+                    large_business_icon_title: "Иконка крупного бизнеса",
+                    medical_center_icon_title: "Иконка медицинского центра",
+                    about_product_title: "О продукте",
+                    clean_modern_interface_title: "<strong>Чистый, современный</strong> интерфейс✨",
+                    clean_modern_interface_desc: "Никакого старомодного, сложного дизайна.",
+                    easy_setup_title: "Простая настройка и контроль⚡️",
+                    easy_setup_desc: "Управляйте своими сотрудниками с легкостью. <br>Для школ мы предлагаем мобильное приложение для родителей, чтобы отслеживать своих детей.",
+                    security_title: "Многоуровневая безопасность🔒",
+                    security_desc: "Мы понимаем, как важно для компаний сохранять конфиденциальность своих данных. <br>Поэтому мы поддерживаем наш сервис в актуальном состоянии с последними мерами безопасности.",
+                    pricing_title: "Гибкие цены для любых нужд",
+                    pricing_subtitle: "От малого бизнеса до крупных предприятий, у нас есть план, который соответствует вашим требованиям.",
+                    starter_plan: "Стартовый",
+                    starter_description: "Идеально для начинающих компаний.",
+                    starter_price_year_1: "3,990,000 UZS / 1-й год",
+                    starter_price_old: "5,000,000 UZS",
+                    starter_price_then: "Затем: 5,000,000 UZS",
+                    storage_20gb: "20 ГБ хранилища",
+                    sql_256mb: "256 МБ SQL",
+                    ram_512mb: "512 МБ ОЗУ",
+                    cpu_0_5: "0.5 CPU",
+                    choose_plan: "Выбрать план",
+                    most_popular: "Самый популярный",
+                    standard_plan: "Стандарт",
+                    standard_description: "Идеально для растущего бизнеса.",
+                    standard_price_year_1: "4,990,000 UZS / 1-й год",
+                    standard_price_old: "7,000,000 UZS",
+                    standard_price_then: "Затем: 7,000,000 UZS",
+                    storage_50gb: "50 ГБ хранилища",
+                    ram_1gb: "1 ГБ ОЗУ",
+                    cpu_1: "1 CPU",
+                    business_plan: "Бизнес",
+                    business_description: "Для устоявшихся компаний и команд.",
+                    business_price_year_1: "6,990,000 UZS / 1-й год",
+                    business_price_old: "12,000,000 UZS",
+                    business_price_then: "Затем: 12,000,000 UZS",
+                    storage_100gb: "100 ГБ хранилища",
+                    sql_1gb: "1 ГБ SQL",
+                    ram_2gb: "2 ГБ ОЗУ",
+                    enterprise_solutions: "Корпоративные решения",
+                    enterprise_description: "Для крупномасштабных развертываний мы предлагаем индивидуальные аппаратные и программные решения.",
+                    contact_us: "Связаться с нами",
+                    leave_application: "Оставить заявку",
+                    footer_copyright: "&copy; 2025 IDonly. Все права защищены.",
+                    powered_by: "Создано"
+                },
+                uz: {
+                    page_title: "IDonly - Xavfsiz davomatni kuzatish.",
+                    nav_about: "Haqida",
+                    nav_pricing: "Narxlar",
+                    nav_contact: "Aloqa",
+                    get_started: "Boshlash",
+                    best_suited_for: "Eng mos keladi",
+                    offices: "Ofislar",
+                    educational_institutions: "Ta'lim muassasalari",
+                    small_businesses: "Kichik biznes",
+                    large_businesses: "Yirik biznes",
+                    medical_centers: "Tibbiyot markazlari",
+                    office_building_icon_title: "Ofis binosi belgisi",
+                    large_business_icon_title: "Katta biznes belgisi",
+                    medical_center_icon_title: "Tibbiyot markazi belgisi",
+                    about_product_title: "Mahsulot haqida",
+                    clean_modern_interface_title: "<strong>Toza, zamonaviy</strong> interfeys✨",
+                    clean_modern_interface_desc: "Eski uslubdagi, murakkab dizayn yo'q.",
+                    easy_setup_title: "Oson sozlash va boshqarish⚡️",
+                    easy_setup_desc: "Xodimlaringizni osonlik bilan boshqaring. <br>Maktablar uchun ota-onalar farzandlarini kuzatishi uchun mobil ilova taklif qilamiz.",
+                    security_title: "Ko'p qatlamli xavfsizlik🔒",
+                    security_desc: "Biz kompaniyalar uchun o'z ma'lumotlarining maxfiyligini saqlash qanchalik muhimligini tushunamiz. <br>Shuning uchun biz xizmatimizni eng so'nggi xavfsizlik choralari bilan yangilab turamiz.",
+                    pricing_title: "Har bir ehtiyoj uchun moslashuvchan narxlar",
+                    pricing_subtitle: "Kichik biznesdan tortib yirik korxonalargacha, bizda sizning talablaringizga mos keladigan reja mavjud.",
+                    starter_plan: "Boshlang'ich",
+                    starter_description: "Ishni boshlayotgan yangi biznes uchun ideal.",
+                    starter_price_year_1: "3,990,000 so'm / 1-yil",
+                    starter_price_old: "5,000,000 so'm",
+                    starter_price_then: "Keyin: 5,000,000 so'm",
+                    storage_20gb: "20 GB xotira",
+                    sql_256mb: "256 MB SQL",
+                    ram_512mb: "512MB RAM",
+                    cpu_0_5: "0.5 CPU",
+                    choose_plan: "Rejani tanlash",
+                    most_popular: "Eng mashhur",
+                    standard_plan: "Standart",
+                    standard_description: "O'sayotgan biznes uchun mukammal.",
+                    standard_price_year_1: "4,990,000 so'm / 1-yil",
+                    standard_price_old: "7,000,000 so'm",
+                    standard_price_then: "Keyin: 7,000,000 so'm",
+                    storage_50gb: "50 GB xotira",
+                    ram_1gb: "1 GB RAM",
+                    cpu_1: "1 CPU",
+                    business_plan: "Biznes",
+                    business_description: "Barqaror biznes va jamoalar uchun.",
+                    business_price_year_1: "6,990,000 so'm / 1-yil",
+                    business_price_old: "12,000,000 so'm",
+                    business_price_then: "Keyin: 12,000,000 so'm",
+                    storage_100gb: "100 GB xotira",
+                    sql_1gb: "1 GB SQL",
+                    ram_2gb: "2 GB RAM",
+                    enterprise_solutions: "Korporativ yechimlar",
+                    enterprise_description: "Keng ko'lamli joylashtirish uchun biz maxsus apparat va dasturiy yechimlarni taklif qilamiz.",
+                    contact_us: "Biz bilan bog'lanish",
+                    leave_application: "Ariza qoldirish",
+                    footer_copyright: "&copy; 2025 IDonly. Barcha huquqlar himoyalangan.",
+                    powered_by: "Tomonidan yaratilgan"
+                }
+            };
 
-                languageSwitcher.addEventListener('change', (event) => {
-                    const selectedLang = event.target.value.toLowerCase();
-                    setLanguage(selectedLang);
-                    console.log(`Language changed to: ${selectedLang}`);
+            const languageSwitcher = document.getElementById('language-switcher');
+
+            function translatePage(language) {
+                document.querySelectorAll('[data-translate-key]').forEach(element => {
+                    const key = element.getAttribute('data-translate-key');
+                    if (translations[language] && translations[language][key]) {
+                        element.innerHTML = translations[language][key];
+                    }
                 });
             }
+
+            languageSwitcher.addEventListener('change', (event) => {
+                translatePage(event.target.value);
+            });
+
+            // Initial translation
+            translatePage('en');
         });
     </script>
-
 </body>
 </html>
-
-
